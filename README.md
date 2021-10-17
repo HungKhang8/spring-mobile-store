@@ -13,7 +13,7 @@ Nếu NetBeans không import nbactions.xml:
 2. Mở Actions
 3. Tìm Run project
 4. Chỉnh Execute Goals là spring-boot:run
-5. Set Properties để trống
+5. phần Set Properties để trống
 6. Nhấn OK
 
 Tài khoản admin để create Product:
