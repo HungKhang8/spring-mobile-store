@@ -1,0 +1,116 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+header{
+
+
+    background-color: black;
+    padding: 50px;
+    margin: -8px;
+}
+h1{
+    font-size: 16px;
+    color: #FFC125;
+    padding-bottom: -10px;
+    margin-top: -60px;
+    margin-left: 40px;
+}
+h2{
+    border-bottom: 1px solid #E3E3E3;
+    padding-bottom: 2px;
+    display: block;
+}
+nav{
+    padding-left: 80px;
+    padding-top: 20px;
+}
+form{
+    padding-left: 3px;
+}
+
+input[type=text], input[type=number], select, textarea {
+    width: 30%;
+    padding: 5px;
+    border: 1px solid #B8B8B8;
+    border-radius: 4px;
+}
+
+label {
+    padding: 12px 12px 12px 70px;
+    text-align: right;
+}
+button[type=button] {
+    background-color: #FFC125;
+    color: white;
+    padding: 5px 7px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+button[type=button]:hover{
+    background-color: FFC125;
+    color: black;
+}
+button[type=submit] {
+    background-color: #FFC125;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+
+button[type=submit]:hover {
+    background-color: black;
+}
+
+.container {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.col-25 {
+    float: left;
+    width: 15%;
+    margin-top: 2px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+.col-40{
+    float: left;
+    width: 85;
+    margin-top: 6px;
+}
+.col-60 {
+    float: left;
+    width: 85%;
+    margin-top: 6px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+a{
+    float: right;
+}
+p{
+    font-size: 60px;
+    display: block;
+    background-color: black;
+    padding: 50px;
+    margin: -8px;
+    color: #FFC125;
+}
+

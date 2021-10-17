@@ -1,0 +1,54 @@
+* {
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+}
+#Welcome, #Notice {
+    color: red;
+    text-align: center;
+}
+#Welcome, #Logout, #Search, #BackPage {
+    text-align: right;
+}
+h1 {
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+th {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.button, .checkBox, .number, .number input {
+    text-align: center;
+    vertical-align: middle;
+}
+.btn {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+}
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+@media all and (min-width: 1081px){
+    table {
+        margin: 10px 0 0 0;
+        width: 60%;
+        float: left;
+        margin: 0 25% 0 25%;
+    }
+}

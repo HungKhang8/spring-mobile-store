@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <title>Product Created</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../css/general.css" th:href="@{/css/general.css}"/>
+    </head>
+    <body>
+        <h1>Product created successfully.</h1>
+        </br>
+        <a th:href="@{/admin/product/create}">Click here to continue creating product.</a>
+    </body>
+</html>

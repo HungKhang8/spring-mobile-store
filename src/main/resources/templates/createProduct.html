@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mobile Store</title>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../css/addProduct.css" th:href="@{/css/createProduct.css}"/>
+    </head>
+    <body>
+        <header> 
+            <th:block sec:authorize="isAuthenticated()">
+                <a th:href="@{/logout}">                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-user-circle"></i>
+                        Logout
+                    </button>
+                </a>
+            </th:block>
+
+            <p>Products</p> <br /> 
+            <h1>Add products</h1>
+        </header>
+        <nav>
+            <h2>Create new product</h2>
+            <div class="container">
+                <div th:if="${errorMessage!= null}" class="error-message" th:utext="${errorMessage}"></div>
+                <form method="POST" th:object = "${productForm}" th:action="@{/admin/product/create}">
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Product Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input th:field="*{proName}">
+                        </div>
+                    </div>
+                    <font color="red" style="margin-left: 15%">
+                    <span class="error-message" th:if="${#fields.hasErrors('proName')}" th:errors="*{proName}"></span>
+                    </font>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Unit Price</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" th:field="*{price}">
+                        </div>
+                    </div>
+                    <font color="red" style="margin-left: 15%">
+                    <span class="error-message" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+                    </font>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Units in Stock</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" th:field="*{stock}"> 
+                        </div>
+                    </div>
+                    <font color="red" style="margin-left: 15%">
+                    <span class="error-message" th:if="${#fields.hasErrors('stock')}" th:errors="*{stock}"></span>
+                    </font>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Description</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" th:field="*{description}"
+                                      style="height:50px"></textarea> 
+                        </div>
+                    </div>
+                    <font color="red" style="margin-left: 15%">
+                    <span class="error-message" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+                    </font>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Manufacturer</label>
+                        </div>
+                        <div class="col-75">
+                            <input th:field="*{manufacturer}" value=""> 
+                        </div>
+                    </div>
+                    <font color="red" style="margin-left: 15%">
+                    <span class="error-message" th:if="${#fields.hasErrors('manufacturer')}" th:errors="*{manufacturer}"></span>
+                    </font>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Category</label>
+                        </div>
+                        <div class="col-75">
+                            <input th:field="*{category}" value=""> 
+                        </div>
+                    </div>
+                    <font color="red" style="margin-left: 15%">
+                    <span class="error-message" th:if="${#fields.hasErrors('category')}" th:errors="*{category}"></span>
+                    </font>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Condition</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="radio" name="condition" value="1" th:field="*{condition}" checked> New
+                            <input type="radio" name="condition" value="0" th:field="*{condition}" > Old
+                            <input type="radio" name="condition" value="2" th:field="*{condition}" > Refurbished
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Products Image File</label>
+
+                        </div>
+                        <div class="col-75">
+                            <input th:field="*{imgLink}" > 
+                        </div>
+                    </div>
+                    <font color="red" style="margin-left: 15%">
+                    <span class="error-message" th:if="${#fields.hasErrors('imgLink')}" th:errors="*{imgLink}"></span>
+                    </font>
+
+                    <div class="row">
+                        <button type="submit" name="action" value="Add">Add product</button>
+                    </div>   
+                </form>
+            </div>
+        </nav>
+    </body>
+</html>

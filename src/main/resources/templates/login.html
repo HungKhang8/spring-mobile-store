@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../css/login.css" th:href="@{/css/login.css}"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">Moblie Store</div>
+        </header>
+        <div class="container">
+            <div class="login-form">
+                <form method="POST" th:action="@{/login/check}">
+                    <h3>Please sign in</h3>
+                    <div class="input-box">
+                        <i ></i>
+                        <input type="text" placeholder="Username" name="userName">
+                    </div>
+                    <div class="input-box">
+                        <i ></i>
+                        <input type="password" placeholder="Password" name="password">
+                    </div>
+                    <th:block th:if="${#session != null && #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}">
+                        <div th:if= "${#request.getParameter('error') == 'true'}">
+                             Invalid username or password.
+                        </div>
+                    </th:block>
+                    <div class="btn-box">
+                        <button type="submit" name="action" value="Login">
+                            <i class="fas fa-user-circle"></i> Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
