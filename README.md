@@ -20,4 +20,4 @@ Tài khoản admin để create Product:
 * username: admin1
 * password: 123
 
-(password trong DB là đã mã hóa)
+(không gõ password y chang trong DB, password trong DB là đã mã hóa)
