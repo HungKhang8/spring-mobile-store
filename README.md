@@ -17,6 +17,7 @@ Nếu NetBeans không import nbactions.xml:
 6. Nhấn OK
 
 Tài khoản admin để create Product:
-username: admin1
-password: 123
+* username: admin1
+* password: 123
+
 (password trong DB là đã mã hóa)
