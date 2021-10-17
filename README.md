@@ -15,3 +15,8 @@ Nếu NetBeans không import nbactions.xml:
 4. Chỉnh Execute Goals là spring-boot:run
 5. Set Properties để trống
 6. Nhấn OK
+
+Tài khoản admin để create Product:
+username: admin1
+password: 123
+(password trong DB là đã mã hóa)
